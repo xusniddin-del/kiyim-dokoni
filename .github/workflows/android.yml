@@ -1,0 +1,64 @@
+name: Android ilova (APK)
+
+on:
+  push:
+    branches: [main]
+    paths: ['index.html', 'icon-512.png', '.github/workflows/android.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Capacitor loyihasini tayyorlash
+        run: |
+          mkdir app && cd app
+          npm init -y > /dev/null
+          npm install @capacitor/core@6.2.0 @capacitor/cli@6.2.0 @capacitor/android@6.2.0
+          mkdir www
+          cp ../index.html ../manifest.webmanifest ../icon-192.png ../icon-512.png www/
+          npx cap init "Kiyim Do'koni" uz.xusniddintech.kiyimdokoni --web-dir=www
+          npx cap add android
+          npx cap sync android
+
+      - name: Ilova belgisi
+        run: |
+          cd app/android/app/src/main/res
+          rm -rf mipmap-anydpi-v26
+          for d in mipmap-*; do
+            cp ../../../../../../icon-512.png "$d/ic_launcher.png"
+            cp ../../../../../../icon-512.png "$d/ic_launcher_round.png"
+            rm -f "$d/ic_launcher_foreground.png"
+          done
+
+      - name: APK yig'ish
+        run: |
+          cd app/android
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+          cp app/build/outputs/apk/debug/app-debug.apk ../../kiyim-dokoni.apk
+
+      - name: Release'ga joylash
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: apk-${{ github.run_number }}
+          name: Kiyim Do'koni — Android ${{ github.run_number }}
+          make_latest: true
+          body: |
+            Telefoningizda shu sahifadan **kiyim-dokoni.apk** faylini yuklab oling va oching.
+            Agar "Noma'lum manbalar" so'ralsa — ruxsat bering.
+          files: kiyim-dokoni.apk

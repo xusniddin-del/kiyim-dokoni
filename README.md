@@ -1,5 +1,6 @@
 # Kiyim Do'koni
 
-Kiyim do'koni uchun telefon ilovasi (PWA): kassa, ombor, mijozlar, hisobot.
+Kiyim do'koni uchun telefon ilovasi: kassa, ombor, mijozlar, hisobot.
 
-Ochish: https://xusniddin-del.github.io/kiyim-dokoni/
+- Veb-ilova (Android va iPhone): https://xusniddin-del.github.io/kiyim-dokoni/
+- Android APK (eng so'nggi): https://github.com/xusniddin-del/kiyim-dokoni/releases/latest/download/kiyim-dokoni.apk
