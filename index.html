@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5B52F0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Do'kon">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>:root{padding-top:env(safe-area-inset-top,0px)}[hidden]{display:none!important}</style>
+<script>window.__PWA__=true</script>
+<title>Kiyim Do'koni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: one phone-width column (max 480px), sky-tinted top, floating bottom nav with a raised "Sotuv" button */
+:root{
+  --font:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --bg:#F2F3F9; --sky:#D9DDFF; --sky2:#ECE4FF; --surface:#FFFFFF; --surface-2:#F4F5FA; --border:#E3E6EF; --border-2:#CDD2DF;
+  --text:#12152B; --text-2:#5A6075;
+  --primary:#5B52F0; --primary-ink:#FFFFFF; --primary-soft:#EEF0FF; --primary-text:#4338CA;
+  --ok-soft:#DCFCE7; --ok-text:#166534; --ok-fill:#15803D;
+  --bad-soft:#FEE2E2; --bad-text:#B91C1C; --bad-fill:#DC2626;
+  --warn-soft:#FEF3C7; --warn-text:#854D0E;
+  --shadow:0 1px 2px rgba(18,21,43,.05),0 8px 24px rgba(40,48,110,.08);
+  --shadow-lg:0 4px 10px rgba(18,21,43,.06),0 18px 40px rgba(40,48,110,.16);
+  --overlay:rgba(18,21,43,.45);
+  --toast-bg:#12152B; --toast-fg:#FFFFFF;
+  --violet:linear-gradient(160deg,#8B7CF8 0%,#5B4BE8 75%);
+  --orange:linear-gradient(160deg,#F7931E 0%,#C9520A 75%);
+  --hero:linear-gradient(155deg,#6F67F5 0%,#4F46E5 65%,#4338CA 100%);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1020; --sky:#1C2050; --sky2:#251B45; --surface:#171A2E; --surface-2:#1F2338; --border:#2A2F48; --border-2:#3A4062;
+  --text:#ECEEF8; --text-2:#A3A9C2; --primary:#5B52F0; --primary-ink:#FFFFFF; --primary-soft:#23264A; --primary-text:#B4B0FF;
+  --ok-soft:#12301F; --ok-text:#6EE7A0; --ok-fill:#15803D; --bad-soft:#3A1518; --bad-text:#FCA5A5; --bad-fill:#DC2626;
+  --warn-soft:#3A2C0B; --warn-text:#FCD34D;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); --shadow-lg:0 4px 10px rgba(0,0,0,.35),0 18px 40px rgba(0,0,0,.45);
+  --overlay:rgba(0,0,0,.6); --toast-bg:#ECEEF8; --toast-fg:#12152B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1020; --sky:#1C2050; --sky2:#251B45; --surface:#171A2E; --surface-2:#1F2338; --border:#2A2F48; --border-2:#3A4062;
+  --text:#ECEEF8; --text-2:#A3A9C2; --primary:#5B52F0; --primary-ink:#FFFFFF; --primary-soft:#23264A; --primary-text:#B4B0FF;
+  --ok-soft:#12301F; --ok-text:#6EE7A0; --ok-fill:#15803D; --bad-soft:#3A1518; --bad-text:#FCA5A5; --bad-fill:#DC2626;
+  --warn-soft:#3A2C0B; --warn-text:#FCD34D;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); --shadow-lg:0 4px 10px rgba(0,0,0,.35),0 18px 40px rgba(0,0,0,.45);
+  --overlay:rgba(0,0,0,.6); --toast-bg:#ECEEF8; --toast-fg:#12152B; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+body::after{content:"";position:fixed;inset:0 0 auto 0;height:340px;z-index:-1;pointer-events:none;
+  background:radial-gradient(40% 18% at 16% 20%,rgba(255,255,255,.35),transparent 70%),linear-gradient(180deg,var(--sky) 0%,var(--sky2) 40%,var(--bg) 100%)}
+h1,h2,h3,p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+.ico{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ico.sm{width:16px;height:16px}.ico.lg{width:24px;height:24px}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--text-2)}
+.app{max-width:480px;margin:0 auto;padding-top:16px;padding-bottom:calc(130px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
+.app.has-cart{padding-bottom:calc(200px + env(safe-area-inset-bottom,0px))}
+.top{display:flex;align-items:center;gap:12px;min-height:48px}
+.top .grow{flex:1;min-width:0}
+.h1{font-size:26px;line-height:32px;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.h2{font-size:20px;line-height:26px;font-weight:800;letter-spacing:-.01em}
+.h3{font-size:17px;line-height:23px;font-weight:700}
+.meta{font-size:14px;line-height:20px;color:var(--text-2);font-weight:500}
+.lab{font-size:13px;line-height:18px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--text-2)}
+.card{background:var(--surface);border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--border)}
+.pad{padding:16px}
+.row{display:flex;align-items:center;gap:12px}
+.between{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.stack{display:flex;flex-direction:column;gap:12px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 22px;border-radius:999px;border:1.5px solid transparent;font-weight:700;font-size:16px;cursor:pointer;white-space:nowrap;text-decoration:none;transition:transform .1s}
+.btn:active{transform:scale(.97)}
+.btn-p{background:var(--primary);color:var(--primary-ink);box-shadow:0 8px 18px rgba(91,82,240,.3)}
+.btn-s{background:var(--primary-soft);color:var(--primary-text)}
+.btn-n{background:var(--surface);color:var(--text);border-color:var(--border-2)}
+.btn-d{background:var(--bad-fill);color:#fff}
+.btn-w{background:#fff;color:#4338CA}
+.btn-sm{min-height:44px;padding:0 16px;font-size:15px}
+.btn-block{width:100%}
+.btn[disabled]{opacity:.5;cursor:not-allowed;box-shadow:none}
+.ib{width:44px;height:44px;border-radius:50%;display:inline-grid;place-items:center;background:var(--surface);border:1px solid var(--border);color:var(--text);cursor:pointer;flex:none;box-shadow:var(--shadow)}
+:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+
+.badge{display:inline-flex;align-items:center;gap:5px;min-height:26px;padding:2px 10px 2px 8px;border-radius:999px;font-size:13px;line-height:18px;font-weight:700;white-space:nowrap}
+.badge .ico{width:14px;height:14px;stroke-width:2.6}
+.b-ok{background:var(--ok-soft);color:var(--ok-text)}.b-bad{background:var(--bad-soft);color:var(--bad-text)}
+.b-warn{background:var(--warn-soft);color:var(--warn-text)}.b-p{background:var(--primary-soft);color:var(--primary-text)}
+.b-n{background:var(--surface-2);color:var(--text-2)}
+
+.ptabs{display:flex;gap:6px;padding:5px;background:var(--surface);border:1px solid var(--border);border-radius:999px;overflow-x:auto;scrollbar-width:none}
+.ptabs::-webkit-scrollbar{display:none}
+.pt{flex:1 1 auto;min-height:40px;padding:0 10px;border-radius:999px;border:0;background:transparent;font-weight:700;font-size:14px;color:var(--text-2);cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.pt[aria-pressed="true"]{background:var(--primary);color:var(--primary-ink)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:0 14px;border-radius:999px;border:1.5px solid var(--border);background:var(--surface);font-weight:600;font-size:14px;cursor:pointer;color:var(--text)}
+.chip[aria-pressed="true"]{border-color:var(--primary);background:var(--primary-soft);color:var(--primary-text)}
+
+.search{position:relative}
+.search .ico{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--text-2)}
+.input,.select,.textarea{width:100%;min-height:50px;border-radius:16px;border:1.5px solid var(--border-2);background:var(--surface);padding:12px 14px;font-size:16px;line-height:22px;color:var(--text)}
+.search .input{padding-left:46px;border-radius:999px}
+.input::placeholder,.textarea::placeholder{color:var(--text-2);opacity:.85}
+.input:focus,.select:focus,.textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(91,82,240,.2)}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:14px;font-weight:700}
+.hint{font-size:13px;color:var(--text-2)}
+.err{font-size:14px;color:var(--bad-text);font-weight:600}
+
+.hero{background:var(--hero);color:#fff;border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:14px;box-shadow:0 16px 34px rgba(79,70,229,.32);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-70px;top:-80px;background:rgba(255,255,255,.09)}
+.hero>*{position:relative;z-index:1}
+.hero .lt{color:#E0E3FF;font-size:14px;font-weight:600}
+.hero .big{font-size:36px;line-height:40px;font-weight:800;letter-spacing:-.02em}
+.hero .big small{font-size:18px;font-weight:700}
+.trend{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.18);border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700}
+.fcard{border:0;font:inherit;text-align:left;cursor:pointer;border-radius:26px;padding:14px;color:#fff;display:flex;flex-direction:column;gap:10px;min-height:150px;position:relative;overflow:hidden}
+.fcard::after{content:"";position:absolute;width:140px;height:140px;border-radius:50%;right:-55px;top:-50px;background:rgba(255,255,255,.12)}
+.fcard>*{position:relative;z-index:1}
+.fc-v{background:var(--violet);box-shadow:0 12px 24px rgba(91,75,232,.28)}.fc-o{background:var(--orange);box-shadow:0 12px 24px rgba(201,82,10,.26)}
+.fcard .wi{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.fc-v .wi{color:#5B4BE8}.fc-o .wi{color:#C9520A}
+.fcard .v{font-size:24px;line-height:28px;font-weight:800;margin-top:auto}
+.fcard .s{font-size:14px;font-weight:600}
+
+.li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);width:100%;background:none;border-left:0;border-right:0;border-top:0;text-align:left;cursor:pointer;color:inherit;font:inherit}
+.li:last-child{border-bottom:0}
+.li .grow{flex:1;min-width:0}
+.nm{font-weight:700;font-size:16px;line-height:21px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sn{font-size:14px;line-height:19px;color:var(--text-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rt{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex:none}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:15px;flex:none;background:var(--primary-soft);color:var(--primary-text)}
+.sw{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;flex:none;position:relative;border:1px solid var(--border)}
+.sw .ico{width:24px;height:24px;stroke-width:1.8}
+.ci{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;flex:none;background:var(--primary-soft);color:var(--primary-text)}
+
+.pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.pc{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:10px;display:flex;flex-direction:column;gap:8px;text-align:left;cursor:pointer;box-shadow:var(--shadow);color:inherit;font:inherit}
+.pc[disabled]{opacity:.55;cursor:not-allowed}
+.pc .tile{height:92px;border-radius:16px;display:grid;place-items:center;position:relative}
+.pc .tile .ico{width:40px;height:40px;stroke-width:1.5}
+.pc .tile .badge{position:absolute;left:8px;top:8px}
+.pc .nm{font-size:15px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.pc .price{font-weight:800;font-size:16px}
+
+.cartbar{position:fixed;left:50%;transform:translateX(-50%);width:min(480px,100%);bottom:calc(92px + env(safe-area-inset-bottom,0px));padding:0 max(12px,env(safe-area-inset-left,0px)) 0 max(12px,env(safe-area-inset-right,0px));z-index:6}
+.cartbar .in{background:var(--surface);border:1px solid var(--border);border-radius:26px;box-shadow:var(--shadow-lg);padding:10px 10px 10px 16px;display:flex;align-items:center;gap:12px}
+
+.nav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(480px,100%);z-index:7;padding:0 max(12px,env(safe-area-inset-left,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-right,0px))}
+.nav .in{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:end;background:var(--surface);border:1px solid var(--border);border-radius:30px;box-shadow:var(--shadow-lg);padding:8px 6px}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:0;cursor:pointer;color:var(--text-2);font-size:11px;line-height:14px;font-weight:700;min-height:60px;white-space:nowrap;justify-content:center;border-radius:20px}
+.tab .pill{width:44px;height:36px;border-radius:999px;display:grid;place-items:center}
+.tab[aria-current="page"]{color:var(--primary-text)}
+.tab[aria-current="page"] .pill{background:var(--primary-soft)}
+.tab.fab .pill{width:58px;height:58px;margin-top:-30px;border-radius:50%;background:var(--primary);color:#fff;box-shadow:0 10px 22px rgba(91,82,240,.45);border:4px solid var(--surface)}
+.tab.fab[aria-current="page"] .pill{background:var(--primary)}
+.tab{position:relative}
+.tab .cnt{position:absolute;top:-24px;left:calc(50% + 12px);min-width:20px;height:20px;border-radius:999px;background:var(--bad-fill);color:#fff;font-size:11px;display:grid;place-items:center;padding:0 5px}
+
+.overlay{position:fixed;inset:0;background:var(--overlay);z-index:20;border:0;width:100%;cursor:pointer;animation:fade .2s}
+.sheet{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(480px,100%);max-height:92vh;max-height:92dvh;overflow-y:auto;z-index:21;background:var(--surface);border-radius:28px 28px 0 0;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:16px;animation:up .25s ease-out;box-shadow:var(--shadow-lg)}
+.grab{width:44px;height:5px;border-radius:9px;background:var(--border-2);margin:0 auto 2px;flex:none}
+.sizes{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.sz{min-height:56px;border-radius:16px;border:1.5px solid var(--border-2);background:var(--surface);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:var(--text)}
+.sz small{font-size:12px;font-weight:600;color:var(--text-2)}
+.sz[aria-pressed="true"]{border-color:var(--primary);background:var(--primary);color:#fff}
+.sz[aria-pressed="true"] small{color:#E0E3FF}
+.sz[disabled]{opacity:.45;cursor:not-allowed;text-decoration:line-through}
+.step{display:inline-flex;align-items:center;gap:4px;background:var(--surface-2);border-radius:999px;padding:4px}
+.step button{width:40px;height:40px;border-radius:50%;border:0;background:var(--surface);display:grid;place-items:center;cursor:pointer;color:var(--text);box-shadow:var(--shadow)}
+.step button[disabled]{opacity:.4;cursor:not-allowed}
+.step span{min-width:30px;text-align:center;font-weight:800}
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:5px;background:var(--surface-2);border-radius:999px}
+.seg button{min-height:44px;border-radius:999px;border:0;background:transparent;font-weight:700;color:var(--text-2);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--text);box-shadow:var(--shadow)}
+.tot{display:flex;flex-direction:column;gap:6px;padding:14px;border-radius:18px;background:var(--surface-2)}
+.receipt{border:1.5px dashed var(--border-2);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:8px;font-variant-numeric:tabular-nums}
+.toast{position:fixed;left:50%;transform:translateX(-50%);top:calc(14px + env(safe-area-inset-top,0px));width:min(448px,calc(100% - 32px));z-index:40;background:var(--toast-bg);color:var(--toast-fg);border-radius:16px;padding:14px 16px;display:flex;gap:10px;align-items:center;font-weight:600;font-size:15px;box-shadow:var(--shadow-lg);animation:drop .25s ease-out}
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:4px;box-shadow:var(--shadow);min-width:0}
+.kpi .v{font-size:22px;line-height:28px;font-weight:800;letter-spacing:-.01em;overflow-wrap:anywhere}
+.chart{display:flex;align-items:flex-end;gap:3px;height:160px;border-bottom:1.5px solid var(--border);padding-top:8px}
+.bar{flex:1;min-width:0;border:0;padding:0;background:var(--primary);border-radius:6px 6px 2px 2px;cursor:pointer;opacity:.85}
+.bar.sel,.bar:hover{opacity:1;outline:2px solid var(--primary-text);outline-offset:1px}
+.bar.zero{background:var(--border-2);min-height:3px}
+.xl{display:flex;gap:3px;margin-top:6px}
+.xl span{flex:1;min-width:0;text-align:center;font-size:11px;color:var(--text-2);font-weight:600;overflow:visible;white-space:nowrap}
+.split{display:flex;height:14px;border-radius:999px;overflow:hidden;gap:2px}
+.split span{display:block;height:100%}
+.legend{display:flex;flex-direction:column;gap:8px}
+.legend .row{justify-content:space-between}
+.dot{width:12px;height:12px;border-radius:4px;flex:none}
+.hbar{height:8px;border-radius:999px;background:var(--surface-2);overflow:hidden}
+.hbar span{display:block;height:100%;background:var(--primary);border-radius:999px}
+.demo{display:flex;align-items:center;gap:10px;padding:10px 12px 10px 14px;border-radius:18px;background:var(--warn-soft);color:var(--warn-text);font-size:14px;font-weight:600}
+.empty{text-align:center;padding:28px 12px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.empty .ci{width:64px;height:64px;border-radius:22px}
+@keyframes up{from{transform:translate(-50%,100%)}to{transform:translate(-50%,0)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes drop{from{transform:translate(-50%,-16px);opacity:0}to{transform:translate(-50%,0);opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 10.2 12 3.5l8.5 6.7V19a1.5 1.5 0 0 1-1.5 1.5h-4.2v-5.8H9.2v5.8H5A1.5 1.5 0 0 1 3.5 19z"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.3l2.2-8H6.3"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.5"/><path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0M15.5 5.2a3.5 3.5 0 0 1 0 6.6M18 14a6.2 6.2 0 0 1 3.2 5.5"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></symbol>
+<symbol id="i-hanger" viewBox="0 0 24 24"><path d="M10 6.5a2 2 0 1 1 2.8 1.8c-.5.3-.8.8-.8 1.4V11"/><path d="M12 11 3.2 16.7a1.3 1.3 0 0 0 .7 2.3h16.2a1.3 1.3 0 0 0 .7-2.3z"/></symbol>
+<symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 16.5V8.5c0-.6.4-1 1-1h3c.4 2 2 3 4 3.3l6.4 1.4c2 .4 3.6 2.1 3.6 4.3v.5H3z"/><path d="M3 19.5h18"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1.5 1.5 0 0 1 0 2.1l-6.3 6.3a1.5 1.5 0 0 1-2.1 0z"/><path d="M8 8h.01" stroke-width="3"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 4.2 2.9 17.5A2 2 0 0 0 4.6 20.5h14.8a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0z"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" stroke-width="3"/></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h9M18 7h2M4 17h3M12 17h8"/><circle cx="15.5" cy="7" r="2.5"/><circle cx="9.5" cy="17" r="2.5"/></symbol>
+<symbol id="i-cash" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="3"/><circle cx="12" cy="12" r="2.6"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9.5 7V4.5h5V7M6 7l1 13h10l1-13"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/></symbol>
+<symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></symbol>
+<symbol id="i-userplus" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 20a7 7 0 0 1 14 0M19 8v6M16 11h6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4.2-2.2 1.5a11.5 11.5 0 0 0 5.2 5.2l1.5-2.2 4.2 1.6V17a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 2.5 6.2 2.5 2.5 0 0 1 5 3.5z"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7 9l5-5 5 5M5 20h14"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+</svg>
+
+<main class="app" id="app" aria-live="polite"></main>
+<div id="layer"></div>
+
+<script>
+window.addEventListener('error',function(e){try{var b=document.getElementById('errbar');if(!b){b=document.createElement('div');b.id='errbar';b.style.cssText='position:fixed;left:12px;right:12px;top:12px;z-index:99;background:#B91C1C;color:#fff;padding:12px 16px;border-radius:14px;font:600 14px/1.4 system-ui,sans-serif';document.body.appendChild(b);}b.textContent='Xatolik: '+(e.message||'')+' — skrinshot qilib yuboring.';}catch(x){}});
+</script>
+<script>
+(()=>{
+/* ================= helpers ================= */
+const KEY='kiyim-dokon-v1';
+const $=id=>document.getElementById(id);
+const ic=(n,c)=>`<svg class="ico${c?' '+c:''}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>Math.round(n||0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ');
+const som=n=>fmt(n)+" so'm";
+const mln=n=>{n=n||0;if(Math.abs(n)>=1e6)return (n/1e6).toFixed(n>=1e7?1:2).replace(/\.?0+$/,'').replace('.',',')+' mln';if(Math.abs(n)>=1e3)return Math.round(n/1e3)+' ming';return fmt(n)};
+const num=v=>{const x=parseInt(String(v||'').replace(/[^\d]/g,''),10);return isNaN(x)?0:x};
+const MON=['yanvar','fevral','mart','aprel','may','iyun','iyul','avgust','sentabr','oktabr','noyabr','dekabr'];
+const DAY=['Yakshanba','Dushanba','Seshanba','Chorshanba','Payshanba','Juma','Shanba'];
+const DS=['Ya','Du','Se','Ch','Pa','Ju','Sh'];
+const dkey=d=>{d=new Date(d);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+const dlong=d=>{d=new Date(d);return `${DAY[d.getDay()]}, ${d.getDate()}-${MON[d.getMonth()]}`};
+const dshort=d=>{d=new Date(d);return `${d.getDate()}-${MON[d.getMonth()]}`};
+const hm=d=>{d=new Date(d);return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')};
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const initials=n=>String(n||'?').trim().split(/\s+/).slice(0,2).map(x=>x[0]||'').join('').toUpperCase();
+const CATS=["Ko'ylak",'Futbolka','Shim','Sviter','Kurtka','Sport','Poyabzal','Aksessuar'];
+const PRESETS={kiyim:['S','M','L','XL','XXL'],poyabzal:['38','39','40','41','42','43','44','45'],yagona:['Yagona']};
+const COLORS={"Oq":'#F1F5F9',"Qora":'#1F2937',"Ko'k":'#1E3A8A',"Moviy":'#60A5FA',"Bej":'#D6C3A5',"Kulrang":'#9CA3AF',"Jigarrang":'#7C4A2D',"Haki":'#8A8B5C',"Qizil":'#B91C1C',"Yashil":'#166534',"Pushti":'#F9A8D4'};
+const LIGHT=new Set(['Oq','Moviy','Bej','Kulrang','Pushti']);
+const PAY={naqd:['cash','Naqd'],karta:['card','Karta'],nasiya:['clock','Nasiya']};
+const PAYC={naqd:'#5B52F0',karta:'#16A34A',nasiya:'#EA7A10'};
+
+/* ================= data ================= */
+function seed(){
+  let s=20261109;const r=()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+  const P=[
+    ["Klassik oq ko'ylak","Ko'ylak",'KY-101','Oq',120000,189000,{S:2,M:5,L:4,XL:1,XXL:0}],
+    ['Jinsi shim slim','Shim','SH-204',"Ko'k",160000,259000,{S:1,M:4,L:3,XL:2,XXL:0}],
+    ['Qishki kurtka','Kurtka','KR-310','Qora',420000,690000,{S:0,M:2,L:1,XL:0,XXL:1}],
+    ['Trikotaj sviter','Sviter','SV-115','Bej',140000,229000,{S:1,M:3,L:3,XL:1,XXL:0}],
+    ['Sport kostyum','Sport','SP-402','Kulrang',230000,379000,{S:0,M:4,L:2,XL:2,XXL:1}],
+    ['Krossovka','Poyabzal','PB-520','Oq',280000,449000,{38:0,39:1,40:2,41:3,42:1,43:0,44:1,45:0}],
+    ['Klassik tufli','Poyabzal','PB-533','Qora',310000,499000,{38:0,39:0,40:1,41:1,42:2,43:1,44:0,45:0}],
+    ['Futbolka basic','Futbolka','FT-010','Qora',45000,89000,{S:6,M:8,L:5,XL:3,XXL:2}],
+    ['Ayollar ko\'ylagi',"Ko'ylak",'KY-145','Moviy',170000,279000,{S:2,M:1,L:0,XL:0,XXL:0}],
+    ['Charm kamar','Aksessuar','AK-701','Jigarrang',60000,119000,{Yagona:7}],
+    ['Qishki qalpoq','Aksessuar','AK-712','Qora',35000,69000,{Yagona:2}],
+    ['Chino shim','Shim','SH-230','Haki',150000,239000,{S:0,M:2,L:3,XL:1,XXL:0}],
+  ].map(([name,cat,sku,color,cost,price,sizes],i)=>({id:'p'+(i+1),name,cat,sku,color,cost,price,sizes}));
+  const C=[['Nodira Karimova','+998 90 123 45 67'],['Jasur Toshmatov','+998 91 234 56 78'],['Malika Yusupova','+998 93 345 67 89'],['Sardor Aliyev','+998 94 456 78 90'],['Dilfuza Rahimova','+998 97 567 89 01'],['Bekzod Ergashev','+998 99 678 90 12'],['Gulnoza Saidova','+998 88 789 01 23'],['Aziz Qodirov','+998 90 890 12 34']]
+    .map(([name,phone],i)=>({id:'c'+(i+1),name,phone,note:i===0?'Doimiy mijoz, M o\'lcham':'',created:new Date(Date.now()-90*864e5).toISOString()}));
+  const sales=[],payments=[];const now=new Date();
+  for(let d=29;d>=0;d--){
+    const day=new Date(now);day.setDate(now.getDate()-d);
+    const n=d===0?Math.max(2,Math.min(5,now.getHours()-9)):2+Math.floor(r()*5)+(day.getDay()===6||day.getDay()===0?2:0);
+    for(let k=0;k<n;k++){
+      const t=new Date(day);const maxH=d===0?Math.max(10,now.getHours()):20;t.setHours(10+Math.floor(r()*(maxH-10+1)),Math.floor(r()*60),0,0);
+      if(d===0&&t>now)t.setTime(now.getTime()-(k+1)*25*60000);
+      const items=[];const m=1+Math.floor(r()*(r()<.7?1:3));
+      for(let j=0;j<m;j++){const p=P[Math.floor(r()*P.length)];const ks=Object.keys(p.sizes);items.push({pid:p.id,name:p.name,sku:p.sku,size:ks[Math.floor(r()*ks.length)],qty:r()<.85?1:2,price:p.price,cost:p.cost});}
+      const sub=items.reduce((a,i)=>a+i.price*i.qty,0);const disc=r()<.2?Math.round(sub*.05/1000)*1000:0;
+      const x=r();const pay=x<.5?'naqd':x<.86?'karta':'nasiya';
+      const cid=pay==='nasiya'||r()<.35?C[Math.floor(r()*C.length)].id:null;
+      sales.push({id:'s'+sales.length,at:t.toISOString(),items,sub,discount:disc,total:sub-disc,pay,cid});
+      if(pay==='nasiya'&&d>3&&r()<.6)payments.push({id:'y'+payments.length,cid,amount:Math.round((sub-disc)*(r()<.5?1:.5)/1000)*1000,at:new Date(t.getTime()+2*864e5).toISOString()});
+    }
+  }
+  sales.sort((a,b)=>a.at<b.at?-1:1);
+  return {v:1,demo:true,store:{name:'Moda Butik',seller:'Dilshod'},products:P,customers:C,sales,payments};
+}
+let DB;
+function load(){try{const raw=localStorage.getItem(KEY);if(raw){const d=JSON.parse(raw);if(d&&d.products)return d;}}catch(e){}return seed();}
+let saveOk=true;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(DB));saveOk=true;}catch(e){saveOk=false;}}
+DB=load();save();
+
+const prod=id=>DB.products.find(p=>p.id===id);
+const cust=id=>DB.customers.find(c=>c.id===id);
+const stockOf=p=>Object.values(p.sizes).reduce((a,b)=>a+(+b||0),0);
+const LOW=3;
+const stockBadge=p=>{const s=stockOf(p);return s===0?`<span class="badge b-bad">${ic('x')}Tugagan</span>`:s<=LOW?`<span class="badge b-warn">${ic('alert')}Kam · ${s}</span>`:`<span class="badge b-ok">${ic('check')}${s} dona</span>`};
+const debtOf=cid=>DB.sales.filter(s=>s.cid===cid&&s.pay==='nasiya').reduce((a,s)=>a+s.total,0)-DB.payments.filter(p=>p.cid===cid).reduce((a,p)=>a+p.amount,0);
+const spentOf=cid=>DB.sales.filter(s=>s.cid===cid).reduce((a,s)=>a+s.total,0);
+const profitOf=s=>s.items.reduce((a,i)=>a+(i.price-i.cost)*i.qty,0)-s.discount;
+const swatch=(p,big)=>{const c=COLORS[p.color]||'#A5B4FC';const fg=LIGHT.has(p.color)?'#1F2937':'#FFFFFF';const ico=p.cat==='Poyabzal'?'shoe':p.cat==='Aksessuar'?'tag':'hanger';return big?`<div class="tile" style="background:${c};color:${fg}">${ic(ico)}${stockOf(p)===0?`<span class="badge b-bad">${ic('x')}Tugagan</span>`:stockOf(p)<=LOW?`<span class="badge b-warn">Kam: ${stockOf(p)}</span>`:''}</div>`:`<div class="sw" style="background:${c};color:${fg}" aria-hidden="true">${ic(ico)}</div>`};
+
+/* ================= UI state ================= */
+const U={tab:'home',q:{sell:'',stock:'',cust:''},cat:'all',sfilter:'all',cfilter:'all',period:7,sel:null,cart:[],pay:'naqd',disc:'',cid:null,sheet:null,f:{},toast:'',confirm:null};
+let toastT;
+function toast(m){U.toast=m;clearTimeout(toastT);toastT=setTimeout(()=>{U.toast='';renderLayer()},2600)}
+const cartTotal=()=>U.cart.reduce((a,i)=>a+i.price*i.qty,0);
+const cartCount=()=>U.cart.reduce((a,i)=>a+i.qty,0);
+const inCart=(pid,size)=>U.cart.filter(i=>i.pid===pid&&(size==null||i.size===size)).reduce((a,i)=>a+i.qty,0);
+
+/* ================= screens ================= */
+function header(title,meta,right){return `<div class="top"><div class="grow"><h1 class="h1">${title}</h1>${meta?`<div class="meta">${meta}</div>`:''}</div>${right||''}</div>`}
+const setBtn=`<button class="ib" type="button" aria-label="Sozlamalar" data-a="sheet" data-v="settings">${ic('settings')}</button>`;
+const demoBar=()=>DB.demo?`<div class="demo">${ic('alert')}<span style="flex:1">Namuna ma'lumotlar ko'rsatilmoqda</span><button class="btn btn-n btn-sm" type="button" data-a="sheet" data-v="settings" style="min-height:36px;padding:0 12px">Tozalash</button></div>`:'';
+const daySales=k=>DB.sales.filter(s=>dkey(s.at)===k);
+function saleRow(s){const c=s.cid&&cust(s.cid);const it=s.items.map(i=>i.name).join(', ');
+  return `<button class="li" type="button" data-a="sheet" data-v="sale:${s.id}"><div class="ci">${ic(PAY[s.pay][0])}</div><div class="grow"><div class="nm">${esc(it)}</div><div class="sn">${hm(s.at)}${c?' · '+esc(c.name):''}</div></div><div class="rt"><span class="num" style="font-weight:800">${fmt(s.total)}</span><span class="badge ${s.pay==='nasiya'?'b-warn':s.pay==='karta'?'b-ok':'b-p'}">${PAY[s.pay][1]}</span></div></button>`}
+
+function Home(){
+  const now=new Date(),tk=dkey(now),y=new Date(now);y.setDate(now.getDate()-1);
+  const T=daySales(tk),Y=daySales(dkey(y));
+  const tSum=T.reduce((a,s)=>a+s.total,0),ySum=Y.reduce((a,s)=>a+s.total,0),tProf=T.reduce((a,s)=>a+profitOf(s),0);
+  const diff=ySum?Math.round((tSum-ySum)/ySum*100):0;
+  const low=DB.products.filter(p=>stockOf(p)<=LOW).length;
+  const debt=DB.customers.reduce((a,c)=>a+Math.max(0,debtOf(c.id)),0);const debtors=DB.customers.filter(c=>debtOf(c.id)>0).length;
+  const recent=DB.sales.slice(-6).reverse();
+  return `${header(esc(DB.store.name),dlong(now),setBtn)}${demoBar()}
+  <section class="hero" aria-label="Bugungi savdo">
+    <div class="between"><span class="lt">Bugungi savdo</span>${ySum?`<span class="trend">${ic(diff>=0?'up':'down','sm')}${diff>=0?'+':''}${diff}% kechagiga nisbatan</span>`:''}</div>
+    <div class="big num">${fmt(tSum)} <small>so'm</small></div>
+    <div class="between"><span class="lt num">${T.length} ta sotuv · foyda ${som(tProf)}</span></div>
+    <button class="btn btn-w" type="button" data-a="tab" data-v="sell">${ic('plus')}Yangi sotuv</button>
+  </section>
+  <div class="grid2">
+    <button class="fcard fc-o" type="button" data-a="lowstock"><span class="wi">${ic('box','lg')}</span><span class="v num">${low} ta</span><span class="s">Kam qolgan mahsulot</span></button>
+    <button class="fcard fc-v" type="button" data-a="debtors"><span class="wi">${ic('clock','lg')}</span><span class="v num">${mln(debt)}</span><span class="s">Nasiya · ${debtors} mijoz</span></button>
+  </div>
+  <section class="card pad"><div class="between"><h2 class="h3">Oxirgi sotuvlar</h2><button class="btn btn-s btn-sm" type="button" data-a="tab" data-v="rep" style="min-height:36px">Hisobot</button></div>
+    ${recent.length?recent.map(saleRow).join(''):`<div class="empty"><div class="ci">${ic('receipt','lg')}</div><p class="muted">Hali sotuv yo'q. Pastdagi "Sotuv" tugmasidan boshlang.</p></div>`}</section>`;
+}
+
+function Sell(){
+  const q=U.q.sell.toLowerCase();
+  const list=DB.products.filter(p=>(U.cat==='all'||p.cat===U.cat)&&(!q||(p.name+' '+p.sku+' '+p.color).toLowerCase().includes(q)));
+  const cats=['all',...CATS.filter(c=>DB.products.some(p=>p.cat===c))];
+  return `${header('Yangi sotuv',U.cart.length?`Savatchada ${cartCount()} ta mahsulot`:"Mahsulotni tanlang")}
+  <div class="search">${ic('search')}<input class="input" id="q-sell" data-q="sell" type="search" placeholder="Nomi, kodi yoki rangi" value="${esc(U.q.sell)}" aria-label="Mahsulot qidirish"></div>
+  <div class="chips" role="group" aria-label="Turkum">${cats.map(c=>`<button class="chip" type="button" aria-pressed="${U.cat===c}" data-a="cat" data-v="${esc(c)}">${c==='all'?'Hammasi':esc(c)}</button>`).join('')}</div>
+  ${list.length?`<div class="pgrid">${list.map(p=>{const left=stockOf(p)-inCart(p.id);return `<button class="pc" type="button" data-a="sheet" data-v="pick:${p.id}" ${left<=0?'disabled':''}>${swatch(p,true)}<span class="nm">${esc(p.name)}</span><span class="sn">${esc(p.sku)} · ${esc(p.color)}</span><span class="between"><span class="price num">${fmt(p.price)}</span>${inCart(p.id)?`<span class="badge b-p">${ic('cart')}${inCart(p.id)}</span>`:''}</span></button>`}).join('')}</div>`
+  :`<div class="card empty"><div class="ci">${ic('search','lg')}</div><p class="muted">Hech narsa topilmadi.</p></div>`}`;
+}
+
+function Stock(){
+  const q=U.q.stock.toLowerCase();
+  let list=DB.products.filter(p=>!q||(p.name+' '+p.sku+' '+p.color+' '+p.cat).toLowerCase().includes(q));
+  if(U.sfilter==='low')list=list.filter(p=>stockOf(p)>0&&stockOf(p)<=LOW);
+  if(U.sfilter==='out')list=list.filter(p=>stockOf(p)===0);
+  const units=DB.products.reduce((a,p)=>a+stockOf(p),0),val=DB.products.reduce((a,p)=>a+stockOf(p)*p.cost,0);
+  const cnt={all:DB.products.length,low:DB.products.filter(p=>stockOf(p)>0&&stockOf(p)<=LOW).length,out:DB.products.filter(p=>stockOf(p)===0).length};
+  return `${header('Ombor',`${units} dona · ${DB.products.length} model · tannarxda ${mln(val)} so'm`,`<button class="ib" type="button" aria-label="Mahsulot qo'shish" data-a="sheet" data-v="pform" style="background:var(--primary);color:#fff;border-color:var(--primary)">${ic('plus')}</button>`)}
+  <div class="search">${ic('search')}<input class="input" id="q-stock" data-q="stock" type="search" placeholder="Qidirish" value="${esc(U.q.stock)}" aria-label="Ombordan qidirish"></div>
+  <div class="ptabs" role="group" aria-label="Qoldiq bo'yicha">${[['all','Hammasi'],['low','Kam qolgan'],['out','Tugagan']].map(([k,l])=>`<button class="pt" type="button" aria-pressed="${U.sfilter===k}" data-a="sfilter" data-v="${k}">${l} · ${cnt[k]}</button>`).join('')}</div>
+  <section class="card" style="padding:4px 16px">${list.length?list.map(p=>`<button class="li" type="button" data-a="sheet" data-v="prod:${p.id}">${swatch(p)}<div class="grow"><div class="nm">${esc(p.name)}</div><div class="sn">${esc(p.sku)} · ${esc(p.color)} · ${fmt(p.price)}</div></div>${stockBadge(p)}</button>`).join('')
+  :`<div class="empty"><div class="ci">${ic('box','lg')}</div><p class="muted">${U.sfilter==='all'?"Ombor bo'sh. Birinchi mahsulotni qo'shing.":"Bu bo'limda mahsulot yo'q."}</p>${U.sfilter==='all'?`<button class="btn btn-p" type="button" data-a="sheet" data-v="pform">${ic('plus')}Mahsulot qo'shish</button>`:''}</div>`}</section>`;
+}
+
+function Cust(){
+  const q=U.q.cust.toLowerCase();
+  let list=DB.customers.filter(c=>!q||(c.name+' '+c.phone).toLowerCase().includes(q)).map(c=>({c,debt:debtOf(c.id),spent:spentOf(c.id)}));
+  if(U.cfilter==='debt')list=list.filter(x=>x.debt>0);
+  list.sort((a,b)=>U.cfilter==='debt'?b.debt-a.debt:b.spent-a.spent);
+  const nd=DB.customers.filter(c=>debtOf(c.id)>0).length;
+  return `${header('Mijozlar',`${DB.customers.length} ta mijoz`,`<button class="ib" type="button" aria-label="Mijoz qo'shish" data-a="sheet" data-v="cform" style="background:var(--primary);color:#fff;border-color:var(--primary)">${ic('userplus')}</button>`)}
+  <div class="search">${ic('search')}<input class="input" id="q-cust" data-q="cust" type="search" placeholder="Ism yoki telefon" value="${esc(U.q.cust)}" aria-label="Mijoz qidirish"></div>
+  <div class="ptabs" role="group" aria-label="Filtr">${[['all',`Hammasi · ${DB.customers.length}`],['debt',`Nasiyachilar · ${nd}`]].map(([k,l])=>`<button class="pt" type="button" aria-pressed="${U.cfilter===k}" data-a="cfilter" data-v="${k}">${l}</button>`).join('')}</div>
+  <section class="card" style="padding:4px 16px">${list.length?list.map(({c,debt,spent})=>`<button class="li" type="button" data-a="sheet" data-v="cust:${c.id}"><div class="av" aria-hidden="true">${esc(initials(c.name))}</div><div class="grow"><div class="nm">${esc(c.name)}</div><div class="sn num">${esc(c.phone)}</div></div><div class="rt"><span class="num" style="font-weight:700;font-size:14px">${mln(spent)}</span>${debt>0?`<span class="badge b-warn">${ic('clock')}${fmt(debt)}</span>`:`<span class="badge b-ok">${ic('check')}Qarzi yo'q</span>`}</div></button>`).join('')
+  :`<div class="empty"><div class="ci">${ic('users','lg')}</div><p class="muted">${U.cfilter==='debt'?"Nasiyachi mijoz yo'q.":"Hali mijoz yo'q."}</p>${U.cfilter==='all'?`<button class="btn btn-p" type="button" data-a="sheet" data-v="cform">${ic('userplus')}Mijoz qo'shish</button>`:''}</div>`}</section>`;
+}
+
+function Rep(){
+  const P=U.period,now=new Date();const days=[];
+  if(P===1){days.push(dkey(now));}else for(let i=P-1;i>=0;i--){const d=new Date(now);d.setDate(now.getDate()-i);days.push(dkey(d));}
+  const set=new Set(days);const S=DB.sales.filter(s=>set.has(dkey(s.at)));
+  const sum=S.reduce((a,s)=>a+s.total,0),prof=S.reduce((a,s)=>a+profitOf(s),0),avg=S.length?sum/S.length:0;
+  let bars,labels,title;
+  if(P===1){const hrs=[];for(let h=9;h<=21;h++)hrs.push(h);bars=hrs.map(h=>({k:h+':00',v:S.filter(s=>new Date(s.at).getHours()===h).reduce((a,s)=>a+s.total,0),lab:h+':00'}));labels=hrs.map((h,i)=>i%3===0?h+':00':'');title="Soatlar bo'yicha";}
+  else{bars=days.map(k=>{const d=new Date(k+'T12:00:00');return{k,v:DB.sales.filter(s=>dkey(s.at)===k).reduce((a,s)=>a+s.total,0),lab:dshort(d)}});labels=days.map((k,i)=>{const d=new Date(k+'T12:00:00');return P===7?DS[d.getDay()]:(i%5===0||i===P-1?String(d.getDate()):'')});title="Kunlar bo'yicha";}
+  const max=Math.max(1,...bars.map(b=>b.v));
+  const sel=bars.find(b=>b.k===U.sel)||bars[bars.length-1];
+  const byPay={naqd:0,karta:0,nasiya:0};S.forEach(s=>byPay[s.pay]+=s.total);
+  const top={};S.forEach(s=>s.items.forEach(i=>{top[i.pid]=top[i.pid]||{name:i.name,q:0,v:0};top[i.pid].q+=i.qty;top[i.pid].v+=i.price*i.qty}));
+  const tops=Object.values(top).sort((a,b)=>b.v-a.v).slice(0,5);const tmax=Math.max(1,...tops.map(t=>t.v));
+  return `${header('Hisobot',P===1?dlong(now):`Oxirgi ${P} kun`,setBtn)}
+  <div class="ptabs" role="group" aria-label="Davr">${[[1,'Bugun'],[7,'7 kun'],[30,'30 kun']].map(([k,l])=>`<button class="pt" type="button" aria-pressed="${P===k}" data-a="period" data-v="${k}">${l}</button>`).join('')}</div>
+  <div class="kpis">
+    <div class="kpi"><span class="meta">Savdo</span><span class="v num">${mln(sum)}</span><span class="meta">so'm</span></div>
+    <div class="kpi"><span class="meta">Sof foyda</span><span class="v num">${mln(prof)}</span><span class="meta">${sum?Math.round(prof/sum*100):0}% savdodan</span></div>
+    <div class="kpi"><span class="meta">Sotuvlar</span><span class="v num">${S.length}</span><span class="meta">${S.reduce((a,s)=>a+s.items.reduce((b,i)=>b+i.qty,0),0)} dona</span></div>
+    <div class="kpi"><span class="meta">O'rtacha chek</span><span class="v num">${mln(avg)}</span><span class="meta">so'm</span></div>
+  </div>
+  <section class="card pad stack">
+    <div class="between"><div><h2 class="h3">${title}</h2><div class="meta num">${esc(sel.lab)}: <b style="color:var(--text)">${som(sel.v)}</b></div></div></div>
+    <div><div class="chart" role="group" aria-label="${title}">${bars.map(b=>`<button class="bar${b.v?'':' zero'}${b.k===sel.k?' sel':''}" type="button" data-a="bar" data-v="${b.k}" aria-label="${esc(b.lab)}: ${som(b.v)}" style="height:${b.v?Math.max(4,Math.round(b.v/max*150)):3}px"></button>`).join('')}</div>
+    <div class="xl" aria-hidden="true">${labels.map(l=>`<span>${l}</span>`).join('')}</div></div>
+  </section>
+  <section class="card pad stack"><h2 class="h3">To'lov turlari</h2>
+    ${sum?`<div class="split" role="img" aria-label="Naqd ${som(byPay.naqd)}, karta ${som(byPay.karta)}, nasiya ${som(byPay.nasiya)}">${Object.keys(byPay).filter(k=>byPay[k]).map(k=>`<span style="width:${byPay[k]/sum*100}%;background:${PAYC[k]}"></span>`).join('')}</div>
+    <div class="legend">${Object.keys(byPay).map(k=>`<div class="row"><span class="row" style="gap:8px"><span class="dot" style="background:${PAYC[k]}"></span>${PAY[k][1]}</span><span class="num" style="font-weight:700">${som(byPay[k])} <span class="muted" style="font-weight:600">· ${Math.round(byPay[k]/sum*100)}%</span></span></div>`).join('')}</div>`:`<p class="muted">Bu davrda sotuv yo'q.</p>`}
+  </section>
+  <section class="card pad stack"><h2 class="h3">Ko'p sotilganlar</h2>
+    ${tops.length?tops.map(t=>`<div class="stack" style="gap:6px"><div class="between"><span class="nm" style="font-size:15px">${esc(t.name)}</span><span class="num meta" style="flex:none">${t.q} dona · ${mln(t.v)}</span></div><div class="hbar"><span style="width:${t.v/tmax*100}%"></span></div></div>`).join(''):`<p class="muted">Ma'lumot yo'q.</p>`}
+  </section>
+  <button class="btn btn-s btn-block" type="button" data-a="copyTSV">${ic('copy')}Sotuvlarni Excel uchun nusxalash</button>`;
+}
+
+/* ================= sheets ================= */
+function wrap(title,body,sub){return `<button class="overlay" type="button" aria-label="Yopish" data-a="close"></button><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-t"><div class="grab"></div><div class="between"><div style="min-width:0"><h2 class="h2" id="sh-t">${title}</h2>${sub?`<div class="meta">${sub}</div>`:''}</div><button class="ib" type="button" aria-label="Yopish" data-a="close">${ic('x')}</button></div>${body}</div>`}
+const fv=(k,d)=>U.f[k]!=null?U.f[k]:(d==null?'':d);
+function confirmBtn(key,label,act,v){return U.confirm===key?`<div class="grid2"><button class="btn btn-n" type="button" data-a="unconfirm">Bekor qilish</button><button class="btn btn-d" type="button" data-a="${act}" data-v="${v||''}">${ic('trash')}Ha, o'chirish</button></div>`:`<button class="btn btn-n btn-block" type="button" data-a="confirm" data-v="${key}" style="color:var(--bad-text)">${ic('trash')}${label}</button>`}
+
+function shPick(p){
+  const sizes=Object.keys(p.sizes);const sel=U.f.size&&p.sizes[U.f.size]!=null?U.f.size:null;
+  const avail=s=>(+p.sizes[s]||0)-inCart(p.id,s);const qty=+U.f.qty||1;
+  return wrap(esc(p.name),`<div class="row">${swatch(p)}<div class="grow" style="flex:1"><div class="h2 num">${som(p.price)}</div><div class="meta">${esc(p.sku)} · ${esc(p.color)} · ${esc(p.cat)}</div></div></div>
+   <div><div class="lab" style="margin-bottom:8px">O'lcham</div><div class="sizes" role="group" aria-label="O'lcham">${sizes.map(s=>`<button class="sz" type="button" aria-pressed="${sel===s}" data-a="size" data-v="${esc(s)}" ${avail(s)<=0?'disabled':''}>${esc(s)}<small>${avail(s)>0?avail(s)+' dona':"yo'q"}</small></button>`).join('')}</div></div>
+   <div class="between"><span class="lab">Soni</span><div class="step"><button type="button" aria-label="Kamaytirish" data-a="qty" data-v="-1" ${qty<=1?'disabled':''}>${ic('minus')}</button><span class="num" aria-live="polite">${qty}</span><button type="button" aria-label="Ko'paytirish" data-a="qty" data-v="1" ${!sel||qty>=avail(sel)?'disabled':''}>${ic('plus')}</button></div></div>
+   <button class="btn btn-p btn-block" type="button" data-a="addCart" data-v="${p.id}" ${sel?'':'disabled'}>${ic('cart')}${sel?`Savatchaga · ${som(p.price*qty)}`:"Avval o'lchamni tanlang"}</button>`);
+}
+function shCart(){
+  const sub=cartTotal();const disc=Math.min(sub,num(U.disc));const total=sub-disc;const c=U.cid&&cust(U.cid);
+  const needC=U.pay==='nasiya'&&!c;
+  return wrap('Savatcha',`${U.cart.length?`<div>${U.cart.map((i,ix)=>{const p=prod(i.pid);const max=(+p.sizes[i.size]||0);return `<div class="li" style="cursor:default">${swatch(p)}<div class="grow"><div class="nm">${esc(p.name)}</div><div class="sn num">${esc(i.size)} · ${fmt(i.price)}</div></div><div class="step"><button type="button" aria-label="Kamaytirish" data-a="cq" data-v="${ix}:-1">${ic(i.qty===1?'trash':'minus','sm')}</button><span class="num">${i.qty}</span><button type="button" aria-label="Ko'paytirish" data-a="cq" data-v="${ix}:1" ${i.qty>=max?'disabled':''}>${ic('plus','sm')}</button></div></div>`}).join('')}</div>`:`<p class="muted">Savatcha bo'sh.</p>`}
+   <div class="field"><span class="lab">Mijoz</span><button class="li" type="button" data-a="sheet" data-v="cpick" style="border:1.5px solid var(--border-2);border-radius:16px;padding:10px 12px">${c?`<div class="av" aria-hidden="true">${esc(initials(c.name))}</div><div class="grow"><div class="nm">${esc(c.name)}</div><div class="sn">${esc(c.phone)}</div></div>`:`<div class="ci">${ic('userplus')}</div><div class="grow"><div class="nm">Mijozni tanlash</div><div class="sn">Ixtiyoriy · nasiya uchun shart</div></div>`}${ic('right')}</button></div>
+   <div class="field"><label for="f-disc">Chegirma, so'm</label><input class="input num" id="f-disc" data-live="disc" inputmode="numeric" placeholder="0" value="${esc(U.disc)}"><div class="chips">${[5,10,15].map(p=>`<button class="chip" type="button" data-a="discp" data-v="${p}">${p}%</button>`).join('')}<button class="chip" type="button" data-a="discp" data-v="0">Chegirmasiz</button></div></div>
+   <div class="field"><span class="lab">To'lov turi</span><div class="seg" role="group" aria-label="To'lov turi">${Object.keys(PAY).map(k=>`<button type="button" aria-pressed="${U.pay===k}" data-a="pay" data-v="${k}">${ic(PAY[k][0],'sm')}${PAY[k][1]}</button>`).join('')}</div>${needC?`<span class="err">Nasiya uchun mijozni tanlang.</span>`:''}</div>
+   <div class="tot num"><div class="between"><span class="muted">Jami</span><span>${som(sub)}</span></div>${disc?`<div class="between"><span class="muted">Chegirma</span><span>−${som(disc)}</span></div>`:''}<div class="between"><b>To'lanadi</b><b style="font-size:20px">${som(total)}</b></div></div>
+   <button class="btn btn-p btn-block" type="button" data-a="checkout" ${!U.cart.length||needC?'disabled':''} style="min-height:56px">${ic('check')}Sotuvni yakunlash</button>`, `${cartCount()} ta mahsulot`);
+}
+function shCPick(){
+  const q=(U.f.cq||'').toLowerCase();const list=DB.customers.filter(c=>!q||(c.name+' '+c.phone).toLowerCase().includes(q));
+  return wrap('Mijozni tanlang',`<div class="search">${ic('search')}<input class="input" id="f-cq" data-live="cq" type="search" placeholder="Ism yoki telefon" value="${esc(U.f.cq||'')}" aria-label="Mijoz qidirish"></div>
+   <button class="btn btn-s btn-block" type="button" data-a="sheet" data-v="cform:cart">${ic('userplus')}Yangi mijoz qo'shish</button>
+   <div>${U.cid?`<button class="li" type="button" data-a="setCid" data-v=""><div class="ci">${ic('x')}</div><div class="grow"><div class="nm">Mijozsiz sotish</div></div></button>`:''}${list.map(c=>`<button class="li" type="button" data-a="setCid" data-v="${c.id}"><div class="av" aria-hidden="true">${esc(initials(c.name))}</div><div class="grow"><div class="nm">${esc(c.name)}</div><div class="sn">${esc(c.phone)}</div></div>${U.cid===c.id?ic('check'):''}</button>`).join('')}</div>`);
+}
+function receiptText(s){const c=s.cid&&cust(s.cid);return `${DB.store.name}\n${dshort(s.at)} ${hm(s.at)} · Chek №${s.id.slice(-5).toUpperCase()}\n------------------------\n`+s.items.map(i=>`${i.name} (${i.size}) x${i.qty}  ${fmt(i.price*i.qty)}`).join('\n')+`\n------------------------\n${s.discount?`Chegirma: −${fmt(s.discount)}\n`:''}JAMI: ${som(s.total)}\nTo'lov: ${PAY[s.pay][1]}${c?`\nMijoz: ${c.name}`:''}\nXaridingiz uchun rahmat!`}
+function shSale(s,fresh){
+  const c=s.cid&&cust(s.cid);
+  return wrap(fresh?'Sotuv yakunlandi':'Sotuv',`${fresh?`<div class="row" style="gap:10px"><span class="badge b-ok">${ic('check')}Saqlandi</span><span class="meta">Ombordan ayirildi</span></div>`:''}
+   <div class="receipt"><div class="between"><b>${esc(DB.store.name)}</b><span class="meta">№${s.id.slice(-5).toUpperCase()}</span></div><div class="meta">${dlong(s.at)}, ${hm(s.at)}</div>
+   ${s.items.map(i=>`<div class="between"><span style="min-width:0">${esc(i.name)} <span class="muted">· ${esc(i.size)} × ${i.qty}</span></span><span>${fmt(i.price*i.qty)}</span></div>`).join('')}
+   ${s.discount?`<div class="between muted"><span>Chegirma</span><span>−${fmt(s.discount)}</span></div>`:''}
+   <div class="between" style="border-top:1.5px dashed var(--border-2);padding-top:8px"><b>Jami</b><b style="font-size:19px">${som(s.total)}</b></div>
+   <div class="between"><span class="muted">To'lov</span><span class="badge ${s.pay==='nasiya'?'b-warn':s.pay==='karta'?'b-ok':'b-p'}">${PAY[s.pay][1]}</span></div>
+   ${c?`<div class="between"><span class="muted">Mijoz</span><span>${esc(c.name)}</span></div>`:''}</div>
+   <div class="grid2"><button class="btn btn-n" type="button" data-a="copyReceipt" data-v="${s.id}">${ic('copy')}Chekni nusxalash</button>${fresh?`<button class="btn btn-p" type="button" data-a="newSale">${ic('plus')}Yangi sotuv</button>`:`<button class="btn btn-n" type="button" data-a="close">Yopish</button>`}</div>
+   ${fresh?'':confirmBtn('sale:'+s.id,"Sotuvni bekor qilish (qaytarish)",'delSale',s.id)}`);
+}
+function shProd(p){
+  const sold=DB.sales.filter(s=>Date.now()-new Date(s.at)<30*864e5).reduce((a,s)=>a+s.items.filter(i=>i.pid===p.id).reduce((b,i)=>b+i.qty,0),0);
+  const markup=p.cost?Math.round((p.price-p.cost)/p.cost*100):0;
+  return wrap(esc(p.name),`<div class="row">${swatch(p)}<div style="flex:1;min-width:0"><div class="meta">${esc(p.sku)} · ${esc(p.color)} · ${esc(p.cat)}</div>${stockBadge(p)}</div></div>
+   <div class="kpis"><div class="kpi"><span class="meta">Sotuv narxi</span><span class="v num">${fmt(p.price)}</span></div><div class="kpi"><span class="meta">Tannarx</span><span class="v num">${fmt(p.cost)}</span><span class="meta">Ustama ${markup}%</span></div></div>
+   <div><div class="lab" style="margin-bottom:8px">O'lchamlar bo'yicha qoldiq</div><div class="sizes">${Object.keys(p.sizes).map(s=>`<div class="sz" style="cursor:default;${(+p.sizes[s]||0)===0?'opacity:.5':''}">${esc(s)}<small>${+p.sizes[s]||0} dona</small></div>`).join('')}</div></div>
+   <p class="meta">Oxirgi 30 kunda sotildi: <b style="color:var(--text)">${sold} dona</b></p>
+   <div class="grid2"><button class="btn btn-p" type="button" data-a="sheet" data-v="restock:${p.id}">${ic('download')}Kirim qilish</button><button class="btn btn-n" type="button" data-a="sheet" data-v="pform:${p.id}">${ic('pen')}Tahrirlash</button></div>
+   ${confirmBtn('prod:'+p.id,"Mahsulotni o'chirish",'delProd',p.id)}`);
+}
+function shRestock(p){
+  return wrap('Kirim qilish',`<p class="meta">${esc(p.name)} · har bir o'lchamga nechta keldi?</p>
+   <div class="sizes">${Object.keys(p.sizes).map(s=>`<div class="field"><label for="rs-${esc(s)}" style="text-align:center">${esc(s)} <span class="meta">(${+p.sizes[s]||0})</span></label><input class="input num" id="rs-${esc(s)}" data-f="rs-${esc(s)}" inputmode="numeric" placeholder="0" value="${esc(fv('rs-'+s))}" style="text-align:center;padding:12px 6px"></div>`).join('')}</div>
+   <button class="btn btn-p btn-block" type="button" data-a="doRestock" data-v="${p.id}">${ic('check')}Omborga qo'shish</button>`, 'Qavs ichida — hozirgi qoldiq');
+}
+function shPForm(p){
+  const preset=fv('preset',p?(p.cat==='Poyabzal'?'poyabzal':Object.keys(p.sizes)[0]==='Yagona'?'yagona':'kiyim'):'kiyim');
+  const sizes=p&&Object.keys(p.sizes).join()===PRESETS[preset].join()?p.sizes:{};
+  const nextSku='MD-'+String(100+DB.products.length+1);
+  return wrap(p?'Mahsulotni tahrirlash':'Yangi mahsulot',`
+   <div class="field"><label for="pf-name">Nomi</label><input class="input" id="pf-name" data-f="name" value="${esc(fv('name',p&&p.name))}" placeholder="Masalan: Klassik ko'ylak"></div>
+   <div class="grid2"><div class="field"><label for="pf-cat">Turkum</label><select class="select" id="pf-cat" data-f="cat">${CATS.map(c=>`<option ${fv('cat',p?p.cat:"Ko'ylak")===c?'selected':''}>${esc(c)}</option>`).join('')}</select></div>
+   <div class="field"><label for="pf-color">Rangi</label><select class="select" id="pf-color" data-f="color">${Object.keys(COLORS).map(c=>`<option ${fv('color',p?p.color:'Qora')===c?'selected':''}>${esc(c)}</option>`).join('')}</select></div></div>
+   <div class="grid2"><div class="field"><label for="pf-cost">Tannarx, so'm</label><input class="input num" id="pf-cost" data-f="cost" inputmode="numeric" value="${esc(fv('cost',p&&p.cost))}" placeholder="0"></div>
+   <div class="field"><label for="pf-price">Sotuv narxi, so'm</label><input class="input num" id="pf-price" data-f="price" inputmode="numeric" value="${esc(fv('price',p&&p.price))}" placeholder="0"></div></div>
+   <div class="field"><label for="pf-sku">Kodi (SKU)</label><input class="input" id="pf-sku" data-f="sku" value="${esc(fv('sku',p?p.sku:nextSku))}"></div>
+   <div class="field"><span class="lab">O'lchamlar</span><div class="seg" role="group" aria-label="O'lcham turi">${[['kiyim','Kiyim'],['poyabzal','Poyabzal'],['yagona','Yagona']].map(([k,l])=>`<button type="button" aria-pressed="${preset===k}" data-a="preset" data-v="${k}">${l}</button>`).join('')}</div></div>
+   <div class="sizes">${PRESETS[preset].map(s=>`<div class="field"><label for="ps-${s}" style="text-align:center">${s}</label><input class="input num" id="ps-${s}" data-f="ps-${s}" inputmode="numeric" placeholder="0" value="${esc(fv('ps-'+s,sizes[s]!=null?sizes[s]:''))}" style="text-align:center;padding:12px 6px"></div>`).join('')}</div>
+   ${U.f._err?`<p class="err">${esc(U.f._err)}</p>`:''}
+   <button class="btn btn-p btn-block" type="button" data-a="saveProd" data-v="${p?p.id:''}">${ic('check')}Saqlash</button>`);
+}
+function shCust(c){
+  const sales=DB.sales.filter(s=>s.cid===c.id).slice().reverse();const debt=debtOf(c.id);
+  return wrap(esc(c.name),`<div class="between"><span class="num" style="font-weight:700;user-select:all">${esc(c.phone)}</span><span class="row" style="gap:8px"><button class="ib" type="button" aria-label="Raqamni nusxalash" data-a="copyPhone" data-v="${c.id}">${ic('copy')}</button><a class="ib" href="tel:${esc(c.phone.replace(/\s/g,''))}" aria-label="Qo'ng'iroq qilish">${ic('phone')}</a></span></div>
+   ${c.note?`<p class="meta">${esc(c.note)}</p>`:''}
+   <div class="kpis" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div class="kpi"><span class="meta">Xaridlar</span><span class="v num">${sales.length}</span></div><div class="kpi"><span class="meta">Jami</span><span class="v num" style="font-size:18px">${mln(spentOf(c.id))}</span></div><div class="kpi"><span class="meta">Nasiya</span><span class="v num" style="font-size:18px;color:${debt>0?'var(--warn-text)':'var(--ok-text)'}">${debt>0?mln(debt):'0'}</span></div></div>
+   ${debt>0?`<div class="card pad stack" style="box-shadow:none;background:var(--warn-soft);border-color:transparent"><div class="between"><b style="color:var(--warn-text)">Qarz: ${som(debt)}</b></div><div class="row"><input class="input num" id="f-payd" data-f="payd" inputmode="numeric" placeholder="Summa" value="${esc(fv('payd'))}" aria-label="To'lov summasi" style="flex:1"><button class="btn btn-p" type="button" data-a="payDebt" data-v="${c.id}">To'ladi</button></div><button class="chip" type="button" data-a="payAll" data-v="${c.id}" style="align-self:flex-start">Hammasini to'ladi</button></div>`:''}
+   <div><div class="lab" style="margin-bottom:4px">Xaridlar tarixi</div>${sales.length?sales.slice(0,10).map(saleRow).join(''):`<p class="muted">Hali xarid qilmagan.</p>`}</div>
+   <div class="grid2"><button class="btn btn-n" type="button" data-a="sheet" data-v="cform:${c.id}">${ic('pen')}Tahrirlash</button><button class="btn btn-p" type="button" data-a="sellTo" data-v="${c.id}">${ic('cart')}Sotish</button></div>
+   ${confirmBtn('cust:'+c.id,"Mijozni o'chirish",'delCust',c.id)}`, sales.length?`Oxirgi xarid: ${dshort(sales[0].at)}`:'');
+}
+function shCForm(c,back){
+  return wrap(c?'Mijozni tahrirlash':'Yangi mijoz',`
+   <div class="field"><label for="cf-name">Ism familiya</label><input class="input" id="cf-name" data-f="name" value="${esc(fv('name',c&&c.name))}" placeholder="Masalan: Nodira Karimova" autocomplete="off"></div>
+   <div class="field"><label for="cf-phone">Telefon</label><input class="input num" id="cf-phone" data-f="phone" inputmode="tel" value="${esc(fv('phone',c?c.phone:'+998 '))}"></div>
+   <div class="field"><label for="cf-note">Izoh</label><input class="input" id="cf-note" data-f="note" value="${esc(fv('note',c&&c.note))}" placeholder="Masalan: M o'lcham, qora rang yoqadi"></div>
+   ${U.f._err?`<p class="err">${esc(U.f._err)}</p>`:''}
+   <button class="btn btn-p btn-block" type="button" data-a="saveCust" data-v="${c?c.id:''}|${back||''}">${ic('check')}Saqlash</button>`);
+}
+function shSettings(){
+  return wrap('Sozlamalar',`
+   <div class="field"><label for="st-name">Do'kon nomi</label><input class="input" id="st-name" data-f="sname" value="${esc(fv('sname',DB.store.name))}"></div>
+   <div class="field"><label for="st-seller">Sotuvchi</label><input class="input" id="st-seller" data-f="seller" value="${esc(fv('seller',DB.store.seller))}"></div>
+   <button class="btn btn-p btn-block" type="button" data-a="saveSettings">${ic('check')}Saqlash</button>
+   <div class="card pad stack" style="box-shadow:none"><h3 class="h3">Zaxira nusxa</h3><p class="meta">Ma'lumotlar shu telefonning o'zida saqlanadi. Telefon almashsa yoki tozalansa yo'qolmasligi uchun haftada bir nusxa oling.</p>
+    <div class="grid2"><button class="btn btn-n" type="button" data-a="exportFile">${ic('download')}Faylga</button><button class="btn btn-n" type="button" data-a="exportCopy">${ic('copy')}Nusxalash</button></div>
+    <label class="btn btn-s btn-block" for="f-import" style="cursor:pointer">${ic('upload')}Nusxadan tiklash</label><input type="file" id="f-import" accept=".json,application/json,text/plain" style="position:absolute;width:1px;height:1px;opacity:0"></div>
+   ${DB.demo?`<div class="card pad stack" style="box-shadow:none;background:var(--warn-soft);border-color:transparent"><b style="color:var(--warn-text)">Namuna ma'lumotlar</b><p class="meta" style="color:var(--warn-text)">Hozirgi mahsulot, mijoz va sotuvlar — namuna. O'z do'koningizni yuritishdan oldin ularni tozalang.</p>${U.confirm==='demo'?`<div class="grid2"><button class="btn btn-n" type="button" data-a="unconfirm">Bekor qilish</button><button class="btn btn-d" type="button" data-a="clearAll">Ha, tozalash</button></div>`:`<button class="btn btn-n btn-block" type="button" data-a="confirm" data-v="demo">${ic('trash')}Namunani tozalash</button>`}</div>`
+   :confirmBtn('all',"Barcha ma'lumotlarni o'chirish",'clearAll')}
+   <button class="btn btn-n btn-block" type="button" data-a="loadDemo">Namuna ma'lumotlarni yuklash</button>
+   <div class="card pad stack" style="box-shadow:none"><h3 class="h3">Telefonga o'rnatish</h3><p class="meta"><b style="color:var(--text)">Android:</b> Chrome menyusi (⋮) → "Bosh ekranga qo'shish".<br><b style="color:var(--text)">iPhone:</b> Safari'da "Ulashish" → "Bosh ekranga qo'shish".</p></div>
+   ${saveOk?'':`<p class="err">Bu brauzer ma'lumotni saqlashga ruxsat bermayapti (yashirin rejim?). Sahifa yopilsa o'zgarishlar yo'qoladi.</p>`}`);
+}
+function shImport(){return wrap('Nusxadan tiklash',`<p class="meta">Avval olingan zaxira nusxa matnini shu yerga joylang.</p><textarea class="textarea" id="f-imp" data-f="imp" rows="6" placeholder='{"v":1,...}'>${esc(fv('imp'))}</textarea>${U.f._err?`<p class="err">${esc(U.f._err)}</p>`:''}<button class="btn btn-p btn-block" type="button" data-a="doImport">${ic('upload')}Tiklash</button>`)}
+
+function sheetHTML(){
+  const sh=U.sheet;if(!sh)return '';const [t,a,b]=sh.split(':');
+  if(t==='pick'){const p=prod(a);return p?shPick(p):''}
+  if(t==='cart')return shCart();
+  if(t==='cpick')return shCPick();
+  if(t==='sale'){const s=DB.sales.find(x=>x.id===a);return s?shSale(s,b==='new'):''}
+  if(t==='prod'){const p=prod(a);return p?shProd(p):''}
+  if(t==='restock'){const p=prod(a);return p?shRestock(p):''}
+  if(t==='pform')return shPForm(a?prod(a):null);
+  if(t==='cust'){const c=cust(a);return c?shCust(c):''}
+  if(t==='cform')return a==='cart'?shCForm(null,'cart'):shCForm(a?cust(a):null);
+  if(t==='settings')return shSettings();
+  if(t==='import')return shImport();
+  return '';
+}
+
+/* ================= render ================= */
+const SCREENS={home:Home,sell:Sell,stock:Stock,cust:Cust,rep:Rep};
+const TABS=[['home','home','Bosh sahifa'],['stock','box','Ombor'],['sell','cart','Sotuv'],['cust','users','Mijozlar'],['rep','chart','Hisobot']];
+let lastTab=null;
+function focusKeep(fn){const a=document.activeElement;const id=a&&a.id;let st=null,en=null;try{st=a.selectionStart;en=a.selectionEnd}catch(e){}fn();if(id){const n=$(id);if(n&&n!==document.activeElement){n.focus({preventScroll:true});try{if(st!=null)n.setSelectionRange(st,en)}catch(e){}}}}
+function render(){
+  focusKeep(()=>{
+    const app=$('app');app.innerHTML=SCREENS[U.tab]();app.classList.toggle('has-cart',U.tab==='sell'&&U.cart.length>0);
+    if(lastTab!==U.tab){window.scrollTo(0,0);lastTab=U.tab;}
+    renderLayer();
+  });
+}
+function renderLayer(){
+  focusKeep(()=>{
+    const cb=U.tab==='sell'&&U.cart.length&&!U.sheet?`<div class="cartbar"><div class="in"><div style="flex:1;min-width:0"><div class="meta">${cartCount()} ta mahsulot</div><div class="num" style="font-weight:800;font-size:18px">${som(cartTotal())}</div></div><button class="btn btn-p" type="button" data-a="sheet" data-v="cart">${ic('cart')}Savatcha</button></div></div>`:'';
+    const nav=`<nav class="nav" aria-label="Asosiy menyu"><div class="in">${TABS.map(([k,i,l])=>`<button class="tab${k==='sell'?' fab':''}" type="button" data-a="tab" data-v="${k}"${U.tab===k?' aria-current="page"':''}><span class="pill">${ic(i,k==='sell'?'lg':'')}</span>${k==='sell'&&cartCount()?`<span class="cnt num">${cartCount()}</span>`:''}${l}</button>`).join('')}</div></nav>`;
+    $('layer').innerHTML=cb+nav+sheetHTML()+(U.toast?`<div class="toast" role="status">${ic('check')}${esc(U.toast)}</div>`:'');
+    document.body.style.overflow=U.sheet?'hidden':'';
+  });
+}
+const all=()=>{save();render();};
+
+/* ================= actions ================= */
+function openSheet(v){U.sheet=v;U.f={};U.confirm=null;}
+async function copy(text,ok){try{await navigator.clipboard.writeText(text);toast(ok);}catch(e){U.sheet='import';U.f={imp:text,_err:"Avtomatik nusxalab bo'lmadi — matnni belgilab, o'zingiz nusxalang."};renderLayer();}}
+function download(name,text,type){try{const b=new Blob([text],{type});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),2000);return true}catch(e){return false}}
+const A={
+  tab:v=>{U.tab=v;U.sheet=null;},
+  sheet:v=>openSheet(v),
+  close:()=>{U.sheet=null;U.confirm=null;},
+  confirm:v=>{U.confirm=v},unconfirm:()=>{U.confirm=null},
+  cat:v=>{U.cat=v},sfilter:v=>{U.sfilter=v},cfilter:v=>{U.cfilter=v},
+  period:v=>{U.period=+v;U.sel=null},bar:v=>{U.sel=v},
+  lowstock:()=>{U.tab='stock';U.sfilter='low'},debtors:()=>{U.tab='cust';U.cfilter='debt'},
+  size:v=>{U.f.size=v;U.f.qty=1},
+  qty:v=>{U.f.qty=Math.max(1,(+U.f.qty||1)+(+v))},
+  addCart:pid=>{const p=prod(pid);const s=U.f.size;const q=+U.f.qty||1;if(!p||!s)return;const ex=U.cart.find(i=>i.pid===pid&&i.size===s);if(ex)ex.qty+=q;else U.cart.push({pid,size:s,qty:q,price:p.price});U.sheet=null;toast(`${p.name} (${s}) savatchaga qo'shildi`)},
+  cq:v=>{const[ix,d]=v.split(':').map(Number);const it=U.cart[ix];if(!it)return;it.qty+=d;if(it.qty<=0)U.cart.splice(ix,1);if(!U.cart.length)U.sheet=null;},
+  discp:v=>{U.disc=+v?String(Math.round(cartTotal()*v/100/1000)*1000):''},
+  pay:v=>{U.pay=v},
+  setCid:v=>{U.cid=v||null;U.sheet='cart';U.f={}},
+  sellTo:v=>{U.cid=v;U.tab='sell';U.sheet=null;toast(`Sotuv: ${cust(v).name}`)},
+  checkout:()=>{
+    if(!U.cart.length)return;if(U.pay==='nasiya'&&!U.cid)return;
+    const items=U.cart.map(i=>{const p=prod(i.pid);return{pid:p.id,name:p.name,sku:p.sku,size:i.size,qty:i.qty,price:i.price,cost:p.cost}});
+    const sub=items.reduce((a,i)=>a+i.price*i.qty,0);const disc=Math.min(sub,num(U.disc));
+    const s={id:'s'+uid(),at:new Date().toISOString(),items,sub,discount:disc,total:sub-disc,pay:U.pay,cid:U.cid};
+    items.forEach(i=>{const p=prod(i.pid);p.sizes[i.size]=Math.max(0,(+p.sizes[i.size]||0)-i.qty)});
+    DB.sales.push(s);U.cart=[];U.disc='';U.cid=null;U.pay='naqd';save();U.sheet='sale:'+s.id+':new';U.f={};
+  },
+  newSale:()=>{U.sheet=null;U.tab='sell'},
+  copyReceipt:v=>{const s=DB.sales.find(x=>x.id===v);if(s)copy(receiptText(s),'Chek nusxalandi — Telegram\'ga joylashingiz mumkin')},
+  delSale:v=>{const s=DB.sales.find(x=>x.id===v);if(!s)return;s.items.forEach(i=>{const p=prod(i.pid);if(p&&p.sizes[i.size]!=null)p.sizes[i.size]=(+p.sizes[i.size]||0)+i.qty});DB.sales=DB.sales.filter(x=>x.id!==v);save();U.sheet=null;U.confirm=null;toast('Sotuv bekor qilindi, mahsulot omborga qaytdi')},
+  doRestock:pid=>{const p=prod(pid);let n=0;Object.keys(p.sizes).forEach(s=>{const q=num(U.f['rs-'+s]);if(q){p.sizes[s]=(+p.sizes[s]||0)+q;n+=q}});if(!n){toast('Hech qaysi o\'lchamga son kiritilmadi');return}save();U.sheet='prod:'+pid;U.f={};toast(`${n} dona omborga qo'shildi`)},
+  preset:v=>{U.f.preset=v},
+  saveProd:id=>{
+    const p=id?prod(id):null;const g=(k,d)=>U.f[k]!=null?U.f[k]:d;
+    const name=String(g('name',p&&p.name||'')).trim();const price=num(g('price',p&&p.price));const cost=num(g('cost',p&&p.cost));
+    if(!name){U.f._err='Mahsulot nomini yozing.';return}if(!price){U.f._err='Sotuv narxini kiriting.';return}
+    const preset=g('preset',p?(p.cat==='Poyabzal'?'poyabzal':Object.keys(p.sizes)[0]==='Yagona'?'yagona':'kiyim'):'kiyim');
+    const keep=p&&Object.keys(p.sizes).join()===PRESETS[preset].join();const sizes={};PRESETS[preset].forEach(s=>{sizes[s]=num(g('ps-'+s,keep?p.sizes[s]:0))});
+    const rec={name,cat:g('cat',p?p.cat:"Ko'ylak"),color:g('color',p?p.color:'Qora'),cost,price,sku:String(g('sku',p?p.sku:'MD-'+(100+DB.products.length+1))).trim(),sizes};
+    if(p){Object.assign(p,rec);U.sheet='prod:'+p.id}else{const np={id:'p'+uid(),...rec};DB.products.push(np);U.sheet='prod:'+np.id}
+    save();U.f={};toast('Mahsulot saqlandi');
+  },
+  delProd:id=>{DB.products=DB.products.filter(p=>p.id!==id);U.cart=U.cart.filter(i=>i.pid!==id);save();U.sheet=null;U.confirm=null;toast("Mahsulot o'chirildi")},
+  saveCust:v=>{
+    const[id,back]=v.split('|');const c=id?cust(id):null;const g=(k,d)=>U.f[k]!=null?U.f[k]:d;
+    const name=String(g('name',c&&c.name||'')).trim();const phone=String(g('phone',c?c.phone:'')).trim();
+    if(!name){U.f._err='Mijoz ismini yozing.';return}
+    const rec={name,phone,note:String(g('note',c&&c.note||'')).trim()};
+    if(c){Object.assign(c,rec);U.sheet='cust:'+c.id}else{const nc={id:'c'+uid(),created:new Date().toISOString(),...rec};DB.customers.push(nc);if(back==='cart'){U.cid=nc.id;U.sheet='cart'}else U.sheet='cust:'+nc.id}
+    save();U.f={};toast('Mijoz saqlandi');
+  },
+  delCust:id=>{DB.customers=DB.customers.filter(c=>c.id!==id);if(U.cid===id)U.cid=null;save();U.sheet=null;U.confirm=null;toast("Mijoz o'chirildi")},
+  payDebt:id=>{const a=num(U.f.payd);if(!a){toast('Summani kiriting');return}DB.payments.push({id:'y'+uid(),cid:id,amount:Math.min(a,debtOf(id)),at:new Date().toISOString()});save();U.f={};toast(`${som(a)} qabul qilindi`)},
+  payAll:id=>{const d=debtOf(id);if(d<=0)return;DB.payments.push({id:'y'+uid(),cid:id,amount:d,at:new Date().toISOString()});save();U.f={};toast('Qarz to\'liq yopildi')},
+  copyPhone:id=>{const c=cust(id);if(c)copy(c.phone,'Raqam nusxalandi')},
+  saveSettings:()=>{DB.store.name=String(U.f.sname!=null?U.f.sname:DB.store.name).trim()||"Do'kon";DB.store.seller=String(U.f.seller!=null?U.f.seller:DB.store.seller).trim();save();U.sheet=null;toast('Sozlamalar saqlandi')},
+  exportFile:()=>{const ok=download(`dokon-zaxira-${dkey(new Date())}.json`,JSON.stringify(DB),'application/json');if(!ok)A.exportCopy();else toast('Zaxira fayli yuklab olindi')},
+  exportCopy:()=>copy(JSON.stringify(DB),'Zaxira nusxa xotiraga olindi — Telegram "Saqlangan xabarlar"ga joylang'),
+  doImport:()=>{try{const d=JSON.parse(U.f.imp||'');if(!d||!Array.isArray(d.products)||!Array.isArray(d.sales))throw 0;DB=d;save();U.sheet=null;U.f={};toast('Ma\'lumotlar tiklandi')}catch(e){U.f._err="Bu matn zaxira nusxaga o'xshamaydi. To'liq nusxalanganini tekshiring."}},
+  clearAll:()=>{DB={v:1,demo:false,store:{name:DB.store.name,seller:DB.store.seller},products:[],customers:[],sales:[],payments:[]};U.cart=[];U.cid=null;save();U.sheet=null;U.confirm=null;toast('Tozalandi — endi o\'z mahsulotlaringizni qo\'shing')},
+  loadDemo:()=>{DB=seed();U.cart=[];save();U.sheet=null;toast('Namuna ma\'lumotlar yuklandi')},
+  copyTSV:()=>{const rows=[['Sana','Vaqt','Mahsulot','O\'lcham','Soni','Narx','Summa','To\'lov','Mijoz'].join('\t')];DB.sales.forEach(s=>{const c=s.cid&&cust(s.cid);s.items.forEach(i=>rows.push([dkey(s.at),hm(s.at),i.name,i.size,i.qty,i.price,i.price*i.qty,PAY[s.pay][1],c?c.name:''].join('\t')))});copy(rows.join('\n'),'Nusxalandi — Excel\'ga joylang (Ctrl+V)')},
+};
+document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el||el.disabled)return;const f=A[el.dataset.a];if(!f)return;e.preventDefault();f(el.dataset.v);render();});
+document.addEventListener('input',e=>{const t=e.target;
+  if(t.dataset.q!=null){U.q[t.dataset.q]=t.value;render();return}
+  if(t.dataset.f){U.f[t.dataset.f]=t.value;return}
+  if(t.dataset.live==='disc'){U.disc=t.value;renderLayer();return}
+  if(t.dataset.live==='cq'){U.f.cq=t.value;renderLayer();return}
+});
+document.addEventListener('change',e=>{const t=e.target;
+  if(t.dataset&&t.dataset.f&&t.tagName==='SELECT'){U.f[t.dataset.f]=t.value}
+  if(t.id==='f-import'&&t.files&&t.files[0]){const r=new FileReader();r.onload=()=>{U.sheet='import';U.f={imp:String(r.result||'')};A.doImport();renderLayer();render()};r.readAsText(t.files[0]);}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&U.sheet){U.sheet=null;renderLayer()}});
+render();
+try{if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)&&window.__PWA__)navigator.serviceWorker.register('sw.js').catch(()=>{})}catch(e){}
+})();
+</script>
+
+</body>
+</html>
