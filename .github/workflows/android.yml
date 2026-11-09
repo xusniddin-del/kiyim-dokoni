@@ -3,7 +3,7 @@ name: Android ilova (APK)
 on:
   push:
     branches: [main]
-    paths: ['index.html', 'icon-512.png', '.github/workflows/android.yml']
+    paths: ['index.html', 'icon-512.png', 'android/**', '.github/workflows/android.yml']
   workflow_dispatch:
 
 permissions:
@@ -34,6 +34,7 @@ jobs:
           npx cap init "Kiyim Do'koni" uz.xusniddintech.kiyimdokoni --web-dir=www
           npx cap add android
           npx cap sync android
+          cp ../android/MainActivity.java android/app/src/main/java/uz/xusniddintech/kiyimdokoni/MainActivity.java
 
       - name: Ilova belgisi
         run: |
